@@ -13,9 +13,9 @@ def tempstrajet() :
     departville = input('Choisir la ville de départ\n')
     arriveville = input("Choisir la ville d'arriver\n")
     
-    #Distance et temps (en seconde) d'accélération et de décélération 
-    distanceacceldecel = 7.5
-    tempsacceldecel = 9 * 60
+    #Distance (en km) et temps (en seconde) d'accélération et de décélération 
+    distanceacceldecel = 7.5 * 2
+    tempsacceldecel = 9 * 60 * 2
 
     # Récupération des informations (distance)
     url = "https://www.bonnesroutes.com/distance/?from="+ departville + "&to=" + arriveville
