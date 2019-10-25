@@ -29,19 +29,23 @@ def tempstrajet() :
     kilometres = 582
 
     # Convertir les kilomètres en temps HH:MM
-    tempssec = ((kilometres - distanceacceldecel)/90) * 3600
-    tempstotalsec = tempssec + tempsacceldecel
-    tempstotalsecbase = tempstotalsec
+    tempssec = (((kilometres - distanceacceldecel)/90) * 3600) + tempsacceldecel
+    kilometreswhaccel = kilometres - distanceacceldecel
+    tempstotalsecbase = tempssec
     
     # Boucle du nombre de pause
-    while a < tempstotalsecbase :
-        if a < tempstotalsecbase :
-            tempstotalsec + 7200
-            a + 7200
-            nbpause + 1
-            # return temps;
+    # Boucle infinie je la passe en com
+    # while a < tempstotalsecbase :
+        # if a < tempstotalsecbase :
+        #     # tempssec + (7200 + (tempssec - (((kilometreswhaccel - distanceacceldecel)/90) * 3600) + tempsacceldecel))
+        #     tempssec + 7200
+        #     a + 7200
+        #     nbpause + 1
+        #     # return temps;
+        # else :
+        #     break
     
-    temps = strftime("%H : %M",localtime(tempstotalsec))
+    temps = strftime("%H : %M",localtime(tempssec))
 
     
 
