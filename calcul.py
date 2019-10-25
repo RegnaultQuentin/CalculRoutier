@@ -7,7 +7,9 @@ from bs4 import BeautifulSoup
 
 
 def tempstrajet() :
-
+    
+    # Déclaration de variable utile
+    a = 0
 
     # Récupération des villes
     departville = input('Choisir la ville de départ\n')
@@ -25,11 +27,17 @@ def tempstrajet() :
     # convertedInt = int(kilometres)
     kilometres = 582
 
-
     # Convertir les kilomètres en temps HH:MM
-    tempssec = (kilometres/90) * 3600
-    temps = strftime("%H : %M",localtime(tempssec))
-    
+    tempssec = ((kilometres - distanceacceldecel)/90) * 3600
+    temps = strftime("%H : %M",localtime(tempssec + tempsacceldecel))
+
+    # Boucle nombre de pause
+    while a < temps :
+        
+        
+        pass
+
+
     # Resultat retourné
     print(departville, arriveville, kilometres, temps)
 
